@@ -13,6 +13,7 @@ $(function () {
           tbody.append(`
               <tr>
                 <td class="id">${product.id}</td>
+                <td><img src="${product.image}" id="image"/></td>
                 <td>
                   <input type="text" class="name" value="${product.name}"/>
                 </td>
@@ -31,19 +32,22 @@ $(function () {
   // POST PRODUCTS
   $('#productForm').on('submit', (e) => {
     e.preventDefault();
-    let newProduct = $('#newProduct');
-    let newPrice = $('#newPrice');
+    var newProduct = $('#newProduct');
+    var newPrice = $('#newPrice');
+    var urlImage = $('#urlImage');
 
     $.ajax({
       url: URI,
       method: 'POST',
       data: {
         name: newProduct.val(),
-        price: newPrice.val()
+        price: newPrice.val(),
+        image : urlImage.val()
       },
       success: function(response) {
-       newProduct.val('');
-       newPrice.val('');
+       newProduct.val('')
+       newPrice.val('')
+       urlImage.val()
        $('#getProducts').click();
       },
       error: function (err) {

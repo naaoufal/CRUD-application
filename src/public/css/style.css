@@ -11,15 +11,29 @@ input[type=text]:focus {
     background-color: #dc3545;
     color: white;
 }
-#newProduct, .price{
-    width: 30%;
+#newProduct{
+    width: 20%;
+    margin: 20px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: 2px solid #dc3545;
+}
+.price, .name{
+    width: 50%;
+    margin: 20px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: 2px solid #dc3545;
+}
+#urlImage{
+    width: 20%;
     margin: 20px;
     padding: 10px 18px;
     border-radius: 5px;
     border: 2px solid #dc3545;
 }
 #newPrice{
-    width: 30%;
+    width: 20%;
     margin: 20px;
     padding: 10px 18px;
     border-radius: 5px;
@@ -63,8 +77,12 @@ h1{
     margin-bottom: 100px;
 }
 #total{
-    width: 60%;
+    width: 80%;
     padding: 20px 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+}
+#image{
+    width: 400px;
+    height: 270px;
 }
