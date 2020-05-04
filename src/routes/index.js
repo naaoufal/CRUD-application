@@ -10,10 +10,12 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   console.log(req.body);
+  var { image } = req.body;
   var { name } = req.body;
   var { price } = req.body;
   products.push({
     id: products.length + 1,
+    image,
     name,
     price
   });

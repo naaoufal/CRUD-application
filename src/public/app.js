@@ -34,20 +34,20 @@ $(function () {
     e.preventDefault();
     var newProduct = $('#newProduct');
     var newPrice = $('#newPrice');
-    var urlImage = $('#urlImage');
-
+    var urlImage = $('#urlImage').val();
+    console.log(urlImage);
     $.ajax({
       url: URI,
       method: 'POST',
       data: {
         name: newProduct.val(),
         price: newPrice.val(),
-        image : urlImage.val()
+        image : urlImage
       },
       success: function(response) {
        newProduct.val('')
        newPrice.val('')
-       urlImage.val()
+       urlImage
        $('#getProducts').click();
       },
       error: function (err) {
